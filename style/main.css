@@ -4,17 +4,19 @@
     --preta: #141414;
 }
 
-/** Forma de zerar as configurações padrão do documento **/
+/* Forma de zerar as configurações padrão do documento */
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /** Faz com que os elementos não ultrapassem a borda **/
+    box-sizing: border-box; /* Faz com que os elementos não ultrapassem a borda */
 }
 
+/*elementos base*/
 body {
-    background: var(--preta); /** Forma de declarar variáveis em CSS **/
+    background: var(--preta); /* Forma de declarar variáveis em CSS */
     
     font-family: 'Times New Roman', Times, serif; /** A primeira será substituída somente em caso de não compatibilidade **/
+    color: white;
 }
 
 header .container {
@@ -46,4 +48,26 @@ header nav a{
 header nav a:hover{ /** Aplica o efeito de mudança de cor do texto 
     ao posicionar o mouse em cima **/
     color: #fff;
+}
+
+/*filme principal*/
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), /*aplica efeito de cor gradiente sobre a imagem de fundo*/ url('/img/capa-house.jpg'); /*forma de colocar uma imagem de fundo*/
+    height: 400px;
+    background-size: cover; /*pega a imagem de fundo e redimensiona para o tamanho da caixa*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; /*elementos alinhados a esquerda*/
+
+}
+
+.filme-principal .descricao{
+    margin-bottom: 40px;
+}
+
+.titulo{
+    font-size: 40px;
 }

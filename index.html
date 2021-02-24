@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head> <!-- Metadados do documento -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/main.css">
-    <title>NETFLIX CLONE</title>
+    <link rel="stylesheet" href="./style/main.css"> <!-- link para o arquivo
+    de configuração de estilos da página. -->
+    <title>NETFLIX CLONE</title> <!-- Insere a string na aba de identificação da página -->
 </head>
-<body>
-    <header>
-        <div class='container'>
+<body> <!-- Bloco do corpo do documento -->
+    <header> <!-- div semantica. indica o cabeçalho -->
+        <div class='container'> 
             <h2 class="logo">NETFLIX</h2>
-            <nav>
+            <nav> <!-- div semantica que aponta para os elementos de menu -->
                 <a href="#">Inicio</a>
                 <a href="#">Séries</a>
                 <a href="#">Filmes</a>
@@ -19,5 +20,27 @@
             </nav>
         </div>
     </header>
+
+    <main> <!-- tag semantica que indica o conteúdo principal.
+    Muito útil para ferramentas de SEO -->
+        
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo">HOUSE OF CARDS</h3>
+                <p class="descricao">Um político inescrupuloso não mede esforços para conquistar o poder nos EUA. Assista agora a nova temporada de House of Cards que esta imperdível.
+                </p>
+                <div class="botoes">
+                    <button role="button" class="botao">
+                        ASSISTIR AGORA
+                    </button>
+                    <button role="button" class="botao"> <!-- role="button" usado para dar o mesmo funcionamento em tablets e smartphones -->
+                        MAIS INFORMAÇÕES
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+
+    </main>
 </body>
 </html>
