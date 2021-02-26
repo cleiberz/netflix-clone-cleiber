@@ -104,3 +104,9 @@ header nav a:hover{ /** Aplica o efeito de mudança de cor do texto
 .filme-principal .container{
     width: 70%; /*enquadra melhor o texto*/
 }
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
