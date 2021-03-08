@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/main.css"> <!-- link para o arquivo
     de configuração de estilos da página. -->
-    
+    <!-- responsividade -->
+    <link rel="stylesheet" href="style/responsive.css">
+
     <!-- owl css -->
     <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
@@ -16,14 +18,40 @@
 </head>
 <body> <!-- Bloco do corpo do documento -->
     <header> <!-- div semantica. indica o cabeçalho -->
-        <div class='container'> 
-            <h2 class="logo">NETFLIX</h2>
-            <nav> <!-- div semantica que aponta para os elementos de menu -->
-                <a href="#">Inicio</a>
-                <a href="#">Séries</a>
-                <a href="#">Filmes</a>
-                <a href="#">Documentários</a>
-            </nav>
+        <div class="container-fundo-esq">
+            <div class='container-left'> 
+                <img src="img/logo_netflix.png">
+                <!--<h2 class="logo">NETFLIX</h2>-->
+                <nav class="nav-left"> <!-- div semantica que aponta para os elementos de menu -->
+                    <a href="#">Inicio</a>
+                    <a href="#">Séries</a>
+                    <a href="#">Filmes</a>
+                    <a href="#">Documentários</a>
+                </nav>
+            </div>
+            <div class="clear"></div>
+        </div>
+        
+    
+
+     <!-- div semantica. indica o cabeçalho -->
+        <div class="container-fundo-dir">
+            <div class='container-rigth'> 
+                
+                <nav class="nav-rigth"> <!-- div semantica que aponta para os elementos de menu -->
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="#">ADULTO</a>
+                    <a href="#"><i class="fas fa-gift"></i></a>
+                    <a class="circulo-not"><span>10</span></a>
+                    <a href="#"><i class="fas fa-bell"></i></a>
+                    <div class="arrow">
+                        <img href="#" src="img/minion-netflix.png">
+                        <i class="fas fa-sort-down"></i>
+
+                    </div> 
+                </nav>
+            </div>
+            <div class="clear"></div>
         </div>
     </header>
 
@@ -32,17 +60,67 @@
         
         <div class="filme-principal">
             <div class="container">
-                <h3 class="titulo">HOUSE OF CARDS</h3>
-                <p class="descricao">Um político inescrupuloso não mede esforços para conquistar o poder nos EUA. Assista agora a nova temporada de House of Cards que esta imperdível.
+                <section class="destaque">
+                    <video autoplay muted loop id="video-destaque">
+                        <source src="img/arrow.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </section>
+                <h3 class="titulo">ARQUEIRO</h3>
+                <h3 class="nova-temporada">Assista a nova temporada!</h3>
+                <p class="descricao">Inspirada nos quadrinhos do Arqueiro Verde, esta série acompanha as aventuras do playboy que se torna super-herói e luta contra vilões armado apenas com arco e flechas.
                 </p>
+                
                 <div class="botoes">
                     <button role="button" class="botao">
-                        <i class="fas fa-play"></i> <!-- link de icone play do awesome -->
-                        ASSISTIR AGORA
+                        <i class="fas fa-play" href="#openModal"></i> <!-- link de icone play do awesome -->
+                        <a href="#openModal">ASSISTIR AGORA</a> 
+                        <div id="openModal" class="modalDialog">
+                            <div class="texto">
+                                <a href="#close" title="Close" class="close">X</a>
+                                <h2>ARQUEIRO</h2><br>
+                                <p>Conforme Arqueiro se aproxima de sua última temporada, confira este vídeo retrospectivo da série e uma prévia da 8ª temporada da San Diego Comic-Con 2019. </p><br>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/2yrviapP5uY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            </div>
+                    </button>
+                    <button role="button" class="botao"> <!-- role="button" usado para dar o mesmo funcionamento em tablets e smartphones -->
+                        <i class="fas fa-plus"></i>
+                        <a href="#openModal2"> MINHA LISTA</a> 
+                        <div id="openModal2" class="modalDialog2">
+                            <div>
+                                <a href="#close2" title="Close" class="close2">X</a>
+                                <h2><br>MINHA LISTA</h2><br>
+                                
+                                <div class="lista">
+                                    <img src="img/mini1.jpg">
+                                    <img src="img/mini2.jpg">
+                                    <img src="img/mini6.jpg">
+                                    <img src="img/mini4.jpg">
+                                    <img src="img/mini3.jpg">
+
+                                </div>
+                                
+                            </div>
+                            </div>
+                        
                     </button>
                     <button role="button" class="botao"> <!-- role="button" usado para dar o mesmo funcionamento em tablets e smartphones -->
                         <i class="fas fa-info-circle"></i>
-                        MAIS INFORMAÇÕES
+                        <a href="#openModal3">MAIS INFORMAÇÕES</a> 
+                        <div id="openModal3" class="modalDialog3">
+                            <div class="informacoes">
+                                <a href="#close3" title="Close" class="close3">X</a>
+                                <h2><br>ARQUEIRO</h2><br>
+                                <p>Arqueiro foi uma série de televisão americana desenvolvida por Greg Berlanti, Andrew Kreisberg e Marc Guggenheim, transmitida pela emissora The CW desde 10 de outubro de 2012, e estrelada por Stephen Amell. A série é baseada no personagem Oliver Queen / Arqueiro Verde da DC Comics, um homem que, depois de cinco anos preso em uma ilha hostil, volta para casa e se torna um herói empunhando um arco e flecha chamado de Arqueiro Verde. É uma série situada no mesmo universo fictício de The Flash e Legends of Tomorrow. A série foi oficializada no primeiro semestre de 2012,[1] com ordem de 23 episódios para a primeira temporada, que estreou em 10 de outubro de 2012.[2] A segunda temporada foi lançada em 9 de outubro de 2013, a terceira temporada foi lançada em 8 de outubro de 2014, a quarta temporada, lançada em 7 de outubro de 2015, e a quinta temporada foi lançada no dia 5 de outubro de 2016.
+
+                                    Arqueiro recebeu críticas positivas de vários críticos. A série teve em média cerca de 3.68 milhões de espectadores ao longo da primeira temporada e recebeu vários prêmios e indicações. Para promover a série, uma história em quadrinhos de pré-visualização foi lançada antes da série de televisão começar, enquanto webisódios que caracterizam um produto tie-in com a empresa Bose foram desenvolvidos para a segunda temporada. Em outubro de 2014, uma série spin-off situada no mesmo universo, intitulada The Flash, estreou. Em agosto de 2015, um spin-off animado, Vixen, foi lançado, enquanto uma outra série spin-off, Legends of Tomorrow, estreou em janeiro de 2016, com vários personagens de Arrow e The Flash. </p>
+                                
+                                
+                                
+                            </div>
+                            </div>
+                        
                     </button>
                 </div>
             </div>
@@ -54,19 +132,19 @@
     <div class="carrosel-filmes">
         <div class="owl-carousel owl-theme">
             <div class="item">
-                <img class="box-filme" src="img/mini1.jpg" alt="" srcset="">
+                <img class="box-filme" src="img/news/news1.jpg" alt="" srcset="">
             </div>
             <div class="item">
-                <img class="box-filme" src="img/mini2.jpg" alt="" srcset="">
+                <img class="box-filme" src="img/news/news2.png" alt="" srcset="">
             </div>
             <div class="item">
-                <img class="box-filme" src="img/mini3.jpg" alt="" srcset="">
+                <img class="box-filme" src="img/news/news3.jpg" alt="" srcset="">
             </div>
             <div class="item">
-                <img class="box-filme" src="img/mini4.jpg" alt="" srcset="">
+                <img class="box-filme" src="img/news/news4.jpg" alt="" srcset="">
             </div>
             <div class="item">
-                <img class="box-filme" src="img/mini5.jpg" alt="" srcset="">
+                <img class="box-filme" src="img/news/news5.jpg" alt="" srcset="">
             </div>
             <div class="item">
                 <img class="box-filme" src="img/mini6.jpg" alt="" srcset="">
